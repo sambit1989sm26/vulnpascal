@@ -1,4 +1,5 @@
 on: [push]
+
 jobs:
   sonar:
     runs-on: windows-latest
@@ -16,7 +17,9 @@ jobs:
         with:
           projectBaseDir: .
           scannerVersion: 7.2.0.5079
+          args: >
+            -Dsonar.projectKey=sambit1989sm26_vulnpascal
+            -Dsonar.organization=sambit1989sm26
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          # SONAR_HOST_URL can be set if you use non-default host:
-          # SONAR_HOST_URL: https://sonarcloud.io
+          SONAR_HOST_URL: https://sonarcloud.io
