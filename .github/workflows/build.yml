@@ -22,6 +22,6 @@ jobs:
           args: >
             -Dsonar.projectKey=Sambit-rgb_vulnpascal
             -Dsonar.host.url=https://yaeko-wholistic-enjoyably.ngrok-free.dev
-            -Dsonar.delphi.library=C:/Program Files (x86)/Embarcadero/Studio/23.0/source/rtl,C:/Program Files (x86)/Embarcadero/Studio/23.0/source/vcl
+            "-Dsonar.delphi.library=C:/Program Files (x86)/Embarcadero/Studio/23.0/source/rtl,C:/Program Files (x86)/Embarcadero/Studio/23.0/source/vcl"
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
